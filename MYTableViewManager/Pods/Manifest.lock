@@ -1,0 +1,20 @@
+PODS:
+  - AsyncDisplayKit (1.9.3):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.9.3)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.3)
+  - pop (1.0.8)
+  - YYKit (0.9.6):
+    - YYKit/no-arc (= 0.9.6)
+  - YYKit/no-arc (0.9.6)
+
+DEPENDENCIES:
+  - AsyncDisplayKit
+  - pop
+  - YYKit
+
+SPEC CHECKSUMS:
+  AsyncDisplayKit: 87d340329280dba0363da3587a43f9d1bbe62aac
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
+  YYKit: 7e27f6b55883bfe3ec2b98e7ad9c38fcbb92a1c5
+
+COCOAPODS: 0.39.0
