@@ -173,10 +173,10 @@
     
     //Horizontal stack for name, username, via icon and time
     ASStackLayoutSpec *nameStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
-                                                                           spacing:5.0
+                                                                           spacing:10
                                                                     justifyContent:ASStackLayoutJustifyContentStart
                                                                         alignItems:ASStackLayoutAlignItemsStretch
-                                                                          children:@[_avatarNode,_nickNameNode, _timeNode, spacer]];
+                                                                          children:@[_avatarNode,_nickNameNode, spacer,_timeNode]];
     
     
     
