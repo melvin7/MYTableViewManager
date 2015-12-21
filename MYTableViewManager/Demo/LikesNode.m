@@ -24,6 +24,7 @@
         _iconNode.image = (_liked) ? [UIImage imageNamed:@"TimeLineLikeSelected.png"] : [UIImage imageNamed:@"TimeLineLike.png"];
         [self addSubnode:_iconNode];
         
+        
         _countNode = [[ASTextNode alloc] init];
         if(_likesCount > 0) {
             if(_liked) {

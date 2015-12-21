@@ -44,7 +44,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _tableViewManager = [[MYTableViewManager alloc] initWithTableView:_tableView delegate:self];
-    [_tableViewManager registerClass:@"TimeLineTableViewItem" forCellWithReuseIdentifier:@"TimeLineTableViewItemCell"];
+    [_tableViewManager registerClass:@"TimeLineTableViewItem"
+          forCellWithReuseIdentifier:@"TimeLineTableViewItemCell"];
     
     [self loadData];
     

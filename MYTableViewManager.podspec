@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://www.timeface.cn"
   s.ios.deployment_target = "7.1"
   s.source       = { :git => "https://github.com/melvin7/MYTableViewManager.git"}
-  s.source_files  = "MYTableViewManager/**/*.{h,m,c}"
+  s.source_files  = "MYTableViewManager/MYTableViewManager/**/*.{h,m,c}"
   s.requires_arc = true
   s.dependency 'pop'
   s.dependency 'AsyncDisplayKit'

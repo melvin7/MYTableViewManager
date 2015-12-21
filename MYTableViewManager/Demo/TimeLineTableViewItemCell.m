@@ -61,13 +61,10 @@
         
         UIImage *modifiedImage;
         CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
-        
         UIGraphicsBeginImageContextWithOptions(image.size, false, [[UIScreen mainScreen] scale]);
-        
         [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:44.0] addClip];
         [image drawInRect:rect];
         modifiedImage = UIGraphicsGetImageFromCurrentImageContext();
-        
         UIGraphicsEndImageContext();
         
         return modifiedImage;
@@ -163,7 +160,6 @@
 
 - (void)layout {
     [super layout];
-    _backgroundMediaNode.frame = self.bounds;
 }
 
 - (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize {
@@ -175,7 +171,7 @@
     ASStackLayoutSpec *nameStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
                                                                            spacing:10
                                                                     justifyContent:ASStackLayoutJustifyContentStart
-                                                                        alignItems:ASStackLayoutAlignItemsStretch
+                                                                        alignItems:ASStackLayoutAlignItemsStart
                                                                           children:@[_avatarNode,_nickNameNode, spacer,_timeNode]];
     
     
@@ -183,7 +179,11 @@
     nameStack.alignSelf = ASStackLayoutAlignSelfStretch;
     
     // bottom controls horizontal stack
-    ASStackLayoutSpec *controlsStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal spacing:10 justifyContent:ASStackLayoutJustifyContentStart alignItems:ASStackLayoutAlignItemsCenter children:@[_likesNode, _commentsNode]];
+    ASStackLayoutSpec *controlsStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
+                                                                               spacing:10
+                                                                        justifyContent:ASStackLayoutJustifyContentStart
+                                                                            alignItems:ASStackLayoutAlignItemsCenter
+                                                                              children:@[_likesNode, _commentsNode]];
     
     //add more gaps for control line
     controlsStack.spacingAfter = 3.0;
