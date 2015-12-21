@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = "Copyright (C) 2015 TimeFace, Inc.  All rights reserved."
   s.author             = { "Melvin" => "yangmin@timeface.cn" }
   s.social_media_url   = "http://www.timeface.cn"
-  s.ios.deployment_target = "7.1"
+  s.ios.deployment_target = "7.0"
   s.source       = { :git => "https://github.com/melvin7/MYTableViewManager.git"}
   s.source_files  = "MYTableViewManager/MYTableViewManager/**/*.{h,m,c}"
   s.requires_arc = true
