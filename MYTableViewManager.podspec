@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency 'pop'
   s.dependency 'AsyncDisplayKit'
+  s.dependency 'YYKit'
 end
