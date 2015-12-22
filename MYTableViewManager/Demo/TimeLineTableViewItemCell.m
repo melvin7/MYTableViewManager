@@ -14,6 +14,7 @@
 @interface TimeLineTableViewItemCell()<ASTextNodeDelegate,ASNetworkImageNodeDelegate> {
     ASTextNode          *_nickNameNode;
     ASTextNode          *_timeNode;
+    ASTextNode          *_fromNode;
     ASNetworkImageNode  *_avatarNode;
     
     
@@ -48,8 +49,16 @@
     _timeNode.flexShrink = YES; //if name and username don't fit to cell width, allow username shrink
     _timeNode.truncationMode = NSLineBreakByTruncatingTail;
     _timeNode.maximumNumberOfLines = 1;
-    
     [self addSubnode:_timeNode];
+    
+    _fromNode = [[ASTextNode alloc] init];
+    _fromNode.attributedString = [[NSAttributedString alloc] initWithString:@"来自iPhone 6S Plus"
+                                                                 attributes:[TextStyles usernameStyle]];
+    _fromNode.flexShrink = YES; //if name and username don't fit to cell width, allow username shrink
+    _fromNode.truncationMode = NSLineBreakByTruncatingTail;
+    _fromNode.maximumNumberOfLines = 1;
+    
+    [self addSubnode:_fromNode];
     
     // user pic
     _avatarNode = [[ASNetworkImageNode alloc] init];
@@ -168,15 +177,36 @@
     spacer.flexGrow = YES;
     
     //Horizontal stack for name, username, via icon and time
-    ASStackLayoutSpec *nameStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
-                                                                           spacing:10
-                                                                    justifyContent:ASStackLayoutJustifyContentStart
-                                                                        alignItems:ASStackLayoutAlignItemsStart
-                                                                          children:@[_avatarNode,_nickNameNode, spacer,_timeNode]];
+    //    ASStackLayoutSpec *nameStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
+    //                                                                           spacing:10
+    //                                                                    justifyContent:ASStackLayoutJustifyContentStart
+    //                                                                        alignItems:ASStackLayoutAlignItemsStart
+    //                                                                          children:@[_avatarNode,_nickNameNode, spacer,_timeNode]];
+    //    
+    //    
+    //    
+    //    nameStack.alignSelf = ASStackLayoutAlignSelfStretch;
     
-    
-    
+    ASStackLayoutSpec *nameStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical
+                                                                           spacing:8
+                                                                    justifyContent:ASStackLayoutJustifyContentStart alignItems:ASStackLayoutAlignItemsStart
+                                                                          children:@[_nickNameNode,_timeNode]];
     nameStack.alignSelf = ASStackLayoutAlignSelfStretch;
+    
+    
+    
+    ASStackLayoutSpec *avatarStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
+                                                                             spacing:6
+                                                                      justifyContent:ASStackLayoutJustifyContentStart
+                                                                          alignItems:ASStackLayoutAlignItemsCenter
+                                                                            children:@[_avatarNode,nameStack,spacer,_fromNode]];
+    avatarStack.alignSelf = ASStackLayoutAlignSelfStretch;
+    
+    NSMutableArray *mainStackContent = [[NSMutableArray alloc] init];
+    
+    [mainStackContent addObject:avatarStack];
+    
+    
     
     // bottom controls horizontal stack
     ASStackLayoutSpec *controlsStack = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
@@ -191,9 +221,7 @@
     
     
     
-    NSMutableArray *mainStackContent = [[NSMutableArray alloc] init];
     
-    [mainStackContent addObject:nameStack];
     [mainStackContent addObject:_titleNode];
     [mainStackContent addObject:_contentNode];
     
