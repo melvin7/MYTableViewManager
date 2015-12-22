@@ -227,9 +227,9 @@
 }
 
 - (void)tableView:(ASTableView *)tableView willDisplayNodeForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.delegate respondsToSelector:@selector(tableView:willLoadCell:forRowAtIndexPath:)]) {
+    if ([self.delegate respondsToSelector:@selector(my_tableView:willLoadCell:forRowAtIndexPath:)]) {
         MYTableViewCell *cell = (MYTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-        [self.delegate tableView:tableView willLoadCell:cell forRowAtIndexPath:indexPath];
+        [self.delegate my_tableView:tableView willLoadCell:cell forRowAtIndexPath:indexPath];
     }
 }
 
