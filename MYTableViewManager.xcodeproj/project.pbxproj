@@ -26,6 +26,8 @@
 		B09C3C781C211226009C6CF0 /* TimeLineLike@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09C3C721C211226009C6CF0 /* TimeLineLike@3x.png */; };
 		B09C3C791C211226009C6CF0 /* TimeLineLikeSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09C3C731C211226009C6CF0 /* TimeLineLikeSelected@2x.png */; };
 		B09C3C7A1C211226009C6CF0 /* TimeLineLikeSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09C3C741C211226009C6CF0 /* TimeLineLikeSelected@3x.png */; };
+		B0DB08041C296DD400516AEC /* MYTableViewLoadingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB08031C296DD400516AEC /* MYTableViewLoadingItem.m */; };
+		B0DB08071C296DE000516AEC /* MYTableViewLoadingItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB08061C296DE000516AEC /* MYTableViewLoadingItemCell.m */; };
 		B0F53C6518F501C40028C4C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F53C6418F501C40028C4C6 /* Foundation.framework */; };
 		B0F53C6718F501C40028C4C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F53C6618F501C40028C4C6 /* CoreGraphics.framework */; };
 		B0F53C6918F501C40028C4C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F53C6818F501C40028C4C6 /* UIKit.framework */; };
@@ -82,6 +84,10 @@
 		B09C3C721C211226009C6CF0 /* TimeLineLike@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TimeLineLike@3x.png"; sourceTree = "<group>"; };
 		B09C3C731C211226009C6CF0 /* TimeLineLikeSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TimeLineLikeSelected@2x.png"; sourceTree = "<group>"; };
 		B09C3C741C211226009C6CF0 /* TimeLineLikeSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TimeLineLikeSelected@3x.png"; sourceTree = "<group>"; };
+		B0DB08021C296DD400516AEC /* MYTableViewLoadingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTableViewLoadingItem.h; sourceTree = "<group>"; };
+		B0DB08031C296DD400516AEC /* MYTableViewLoadingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTableViewLoadingItem.m; sourceTree = "<group>"; };
+		B0DB08051C296DE000516AEC /* MYTableViewLoadingItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTableViewLoadingItemCell.h; sourceTree = "<group>"; };
+		B0DB08061C296DE000516AEC /* MYTableViewLoadingItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTableViewLoadingItemCell.m; sourceTree = "<group>"; };
 		B0F53C6118F501C40028C4C6 /* MYTableViewManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYTableViewManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F53C6418F501C40028C4C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0F53C6618F501C40028C4C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +156,10 @@
 				B09C3C541C2038A0009C6CF0 /* MYTableViewItem.m */,
 				B09C3C501C2037DF009C6CF0 /* MYTableViewCell.h */,
 				B09C3C511C2037DF009C6CF0 /* MYTableViewCell.m */,
+				B0DB08021C296DD400516AEC /* MYTableViewLoadingItem.h */,
+				B0DB08031C296DD400516AEC /* MYTableViewLoadingItem.m */,
+				B0DB08051C296DE000516AEC /* MYTableViewLoadingItemCell.h */,
+				B0DB08061C296DE000516AEC /* MYTableViewLoadingItemCell.m */,
 			);
 			path = MYTableViewManager;
 			sourceTree = "<group>";
@@ -424,6 +434,7 @@
 			files = (
 				B09C3C581C203C28009C6CF0 /* MYTableViewSection.m in Sources */,
 				B09C3C521C2037DF009C6CF0 /* MYTableViewCell.m in Sources */,
+				B0DB08071C296DE000516AEC /* MYTableViewLoadingItemCell.m in Sources */,
 				B0F53C7B18F501C40028C4C6 /* ViewController.m in Sources */,
 				B09C3C671C21058C009C6CF0 /* YYFPSLabel.m in Sources */,
 				B09C3C6A1C210FD4009C6CF0 /* LikesNode.m in Sources */,
@@ -431,6 +442,7 @@
 				B09C3C5F1C20F26E009C6CF0 /* TimeLineTableViewItemCell.m in Sources */,
 				B09C3C641C20FA66009C6CF0 /* TextStyles.m in Sources */,
 				B09C3C5C1C20F262009C6CF0 /* TimeLineTableViewItem.m in Sources */,
+				B0DB08041C296DD400516AEC /* MYTableViewLoadingItem.m in Sources */,
 				B09C3C551C2038A0009C6CF0 /* MYTableViewItem.m in Sources */,
 				B0F53C7518F501C40028C4C6 /* AppDelegate.m in Sources */,
 				B0F53C7118F501C40028C4C6 /* main.m in Sources */,
