@@ -30,4 +30,11 @@
     
     _titleNode.frame = CGRectMake((self.calculatedSize.width - _titleNode.calculatedSize.width)/2, (self.calculatedSize.height - _titleNode.calculatedSize.height)/2, _titleNode.calculatedSize.width, _titleNode.calculatedSize.height);
 }
+
+- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize {
+    return [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(12, 12, 12, 12)
+                                                  child:nil];
+    
+}
+
 @end
