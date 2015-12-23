@@ -39,7 +39,6 @@
                                                                             children:@[_titleNode]];
     return [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(12, 12, 12, 12)
                                                   child:contentSpec];
-    
 }
 
 @end
