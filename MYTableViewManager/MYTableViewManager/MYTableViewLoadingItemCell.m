@@ -32,8 +32,13 @@
 }
 
 - (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize {
+    ASStackLayoutSpec *contentSpec = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical
+                                                                             spacing:8.0
+                                                                      justifyContent:ASStackLayoutJustifyContentCenter
+                                                                          alignItems:ASStackLayoutAlignItemsStart
+                                                                            children:@[_titleNode]];
     return [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(12, 12, 12, 12)
-                                                  child:nil];
+                                                  child:contentSpec];
     
 }
 
